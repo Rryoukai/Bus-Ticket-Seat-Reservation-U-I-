@@ -1,0 +1,175 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:40px;
+}
+
+.page{
+    background:#f4f6f9;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#333;
+}
+
+.booking-form-card,
+.seat-section-card,
+.ticket-card{
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    margin-top:25px;
+    margin-bottom:25px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.booking-form h2,
+.seat-section h2,
+.ticket h2{
+    margin-bottom:15px;
+    color:#444;
+}
+
+form{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+
+
+input{
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+button{
+    padding:12px;
+    background:#007bff;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0056b3;
+}
+
+.seat-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.seat{
+    background:#28a745;
+    color:white;
+    text-align:center;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.seat:hover{
+    transform:scale(1.05);
+}
+
+.ticket-card{
+    border:3px dashed #007bff;
+}
+
+.ticket p{
+    margin: 10px;
+}
+
+#theme {
+    display:none;
+}
+
+#theme:checked ~ .page {
+    background:#121212;
+    color:white;
+}
+
+/* changed
+.bus-layout{
+    display: grid;
+    grid-template-columns: repeat(2, 60px) 40px repeat(2, 60px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.bus-layout {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+*/
+
+.bus-layout{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.aisle{
+    width: 40px;
+}
+
+/* changed
+.seat{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #28a745;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+*/
+
+.seat{
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #28a745;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .seat {
+        width: 45px;
+        height: 45px;
+        font-size: 12px;
+    }
+}
+
+h2#seat-selection {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #444;
+}
