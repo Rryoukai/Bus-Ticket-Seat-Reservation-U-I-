@@ -88,6 +88,7 @@ button:hover{
 
 .seat:hover{
     transform:scale(1.05);
+    background: crimson;
 }
 
 .ticket-card{
