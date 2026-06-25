@@ -28,6 +28,9 @@ h1{
     text-align:center;
     margin-bottom:30px;
     background: linear-gradient(to right, green, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .booking-form-card,
